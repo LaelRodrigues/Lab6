@@ -17,4 +17,13 @@ namespace geometria {
 	//Destrutor padrao
 	Figura::~Figura() {}
 
+	/** 
+	 * @param o Referencia para stream de saida
+	 * @param f Referencia para um objeto Figura
+	 * @return Referencia para stream de saida
+	 */
+	std::ostream& operator<< (std::ostream &o, const Figura &f) {
+		return f.print(o);
+	}
+
 }
