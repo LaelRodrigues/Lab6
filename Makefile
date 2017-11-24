@@ -17,9 +17,9 @@ PATH_DIR = /usr/local
 
 .PHONY: all init clean debug doxy doc install linux windows
 
-linux: init geometria_estatico geometria_dinamico
+linux: init geometrica_estatica geometrica_dinamica
 
-windows: init geometria_estatico.exe geometria_dinamico.exe
+windows: init geometrica_estatica.exe geometrica_dinamica.exe
 
 init:
 	@mkdir -p $(BIN_DIR)/
@@ -27,10 +27,10 @@ init:
 	@mkdir -p $(LIB_DIR)/
 
 # Linux
-geometria_estatico: libLael.a
+geometrica_estatica: libLael.a
 	$(CC) $(SRC_DIR)/main.cpp $(CFLAGS) -I$(INC_DIR) -L$(LIB_DIR) $(LIBFLAGS) -o $(BIN_DIR)/$@
 
-geometria_dinamico: libLael.so
+geometrica_dinamica: libLael.so
 	$(CC) $(SRC_DIR)/main.cpp $(CFLAGS) -I$(INC_DIR) -L$(LIB_DIR) $(LIBFLAGS) -o $(BIN_DIR)/$@	
 
 libLael.a:
@@ -62,10 +62,10 @@ libLael.so:
 	$(CC) -shared -fPIC -o $(LIB_DIR)/libLael.so $(OBJ_DIR)/figura.o $(OBJ_DIR)/plana.o $(OBJ_DIR)/espacial.o $(OBJ_DIR)/triangulo.o $(OBJ_DIR)/retangulo.o $(OBJ_DIR)/quadrado.o $(OBJ_DIR)/circulo.o $(OBJ_DIR)/piramide.o $(OBJ_DIR)/cubo.o $(OBJ_DIR)/paralelepipedo.o $(OBJ_DIR)/esfera.o 	
 
 # Windows
-geometria_estatico.exe: libLael.lib
+geometrica_estatica.exe: libLael.lib
 	$(CC) $(SRC_DIR)/main.cpp $(CFLAGS) -I$(INC_DIR) $(LIB_DIR)/libLael.lib -o $(BIN_DIR)/$@
 
-geometria_dinamico.exe: libLael.dll
+geometrica_dinamica.exe: libLael.dll
 	$(CC) $(SRC_DIR)/main.cpp $(CFLAGS) -I$(INC_DIR) $(LIB_DIR)/libLael.dll -o $(BIN_DIR)/$@	
 
 libLael.lib:
@@ -113,7 +113,7 @@ install:
 	cp $(INC_DIR)/esfera.h $(PATH_DIR)/include/
 	cp $(LIB_DIR)/libLael.so $(PATH_DIR)/lib/
 
-unistall:
+uninstall:
 	$(RM) $(PATH_DIR)/include/figura.h
 	$(RM) $(PATH_DIR)/include/plana.h
 	$(RM) $(PATH_DIR)/include/espacial.h

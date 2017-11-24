@@ -4,7 +4,7 @@
  *			um quadrado
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	22/11/2017
- * @date 	22/11/2017
+ * @date 	24/11/2017
  */	
 
 #ifndef QUADRADO_H
@@ -21,7 +21,7 @@ namespace geometria {
 	
 	/**
  	 * @class 	Quadrado quadrado.h
-	 * @brief	Classe que representa um quadrado
+	 * @brief	Classe que representa um Quadrado
  	 * @details O atribulo do quadrado e o seu lado
  	 */
 	class Quadrado : public Plana {
@@ -36,6 +36,9 @@ namespace geometria {
 
 			/** @brief Construtor parametrizado */	
 			Quadrado(float _lado);
+
+			/** @brief Construtor padrao */
+			~Quadrado();
 
 			/** @brief Retorna o lado do quadrado */
 			float getLado();

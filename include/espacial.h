@@ -4,7 +4,7 @@
  *			uma figura geometrica espacial
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	15/11/2017
- * @date 	21/11/2017
+ * @date 	24/11/2017
  */	
 
 
@@ -18,7 +18,7 @@
 namespace geometria {
 	/**
 	 * @class 	Espacial espacial.h
-	 * @brief	Classe que representa um figura geometrica espacial
+	 * @brief	Classe que representa um figura geometrica Espacial
 	 */
 	class Espacial : public Figura {
 

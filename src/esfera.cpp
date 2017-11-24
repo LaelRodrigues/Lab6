@@ -4,7 +4,7 @@
  *			uma esfera
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	23/11/2017
- * @date 	23/11/2017
+ * @date 	24/11/2017
  */
 
 
@@ -19,6 +19,7 @@ using std::cout;
 #include <cstdlib>
 using std::exit;
 
+/** @brief Constante PI */
 #define PI 3.1415
 
 namespace geometria {

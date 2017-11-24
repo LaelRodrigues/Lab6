@@ -4,7 +4,7 @@
  *			um quadrado
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	22/11/2017
- * @date 	22/11/2017
+ * @date 	24/11/2017
  */
 
 
@@ -26,8 +26,11 @@ namespace geometria {
 
 	/** @param _lado Lado do quadrado */
 	Quadrado::Quadrado(float _lado){
-		lado = _lado;
+		setLado(_lado);
 	}
+
+	/** Destrutor padrao */
+	Quadrado::~Quadrado(){}
 
 	/** @return Lado do quadrado */
 	float Quadrado::getLado() {

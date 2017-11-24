@@ -1,11 +1,11 @@
-#					Laboratório de programação 5
+#					Laboratório de programação 6
 Aluno: Robson Lael de Melo Rodrigues
 
 Compilação: 
 	
 	Digite 'make' no diretório raiz da atividade.
-	Digite 'make install' para instalar as bibliotecas no sistema
-	Caso que deseje desinstalar as bibliotecas do sistema digite 'make uninstall'
+	Digite 'sudo make install' para instalar as bibliotecas no sistema
+	Caso deseje desinstalar as bibliotecas do sistema digite 'sudo make uninstall'
 	
 execução:
 	

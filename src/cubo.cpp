@@ -4,7 +4,7 @@
  *			um cubo
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	22/11/2017
- * @date 	22/11/2017
+ * @date 	24/11/2017
  */
 
 

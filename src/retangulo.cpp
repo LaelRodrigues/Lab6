@@ -4,7 +4,7 @@
  *			um retangulo
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	21/11/2017
- * @date 	22/11/2017	
+ * @date 	24/11/2017	
  */
 
 #include <iostream>
@@ -69,8 +69,8 @@ namespace geometria {
  	 * @return Referencia para Stream de saida
  	 */
 	std::ostream& Retangulo::print(std::ostream &o) const {
-		o << "base do retangulo = " << base << endl;
-		o << "altura do retangulo = " << altura;
+		o << "Base do retangulo = " << base << endl;
+		o << "Altura do retangulo = " << altura;
 		return o;
 	}
 }

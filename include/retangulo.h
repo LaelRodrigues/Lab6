@@ -4,7 +4,7 @@
  *			um retangulo
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	21/11/2017
- * @date 	22/11/2017
+ * @date 	24/11/2017
  */
 
 
@@ -17,7 +17,7 @@ namespace geometria {
 
 	/**
 	 * @class 	Retangulo retangulo.h
-	 * @brief	Classe que representa um retangulo
+	 * @brief	Classe que representa um Retangulo
 	 * @details	Os atributos da classe Retangulo: base e altura 
 	 */
 	class Retangulo : public Plana {

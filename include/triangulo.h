@@ -4,7 +4,7 @@
  *			um triangulo equilatero
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	15/11/2017
- * @date 	21/11/2017
+ * @date 	24/11/2017
  */	
 
 #ifndef TRIANGULO_H
@@ -16,14 +16,12 @@ using std::ostream;
 #include "plana.h"
 #include "figura.h"
 
-/**
- * @class 	Triangulo triangulo.h
- * @brief	Classe que representa um Triangulo
- * @details O atribulo do triangulo e seu lado
- */
-
 namespace geometria {
-
+	/**
+	 * @class 	Triangulo triangulo.h
+ 	 * @brief	Classe que representa um Triangulo
+ 	 * @details O atribulo do triangulo e seu lado
+ 	 */
 	class Triangulo : public Plana {
 		
 		private:		
@@ -37,7 +35,10 @@ namespace geometria {
 			/** @brief Construtor parametrizado */	
 			Triangulo(float _lado);
 
-			/** @brief Retorna o Lado do triangulo */
+			/** @brief Destrutor padrao */
+			~Triangulo();
+
+			/** @brief Retorna o lado do triangulo */
 			float getLado();
 
 			/** @brief Modifica o lado do triangulo */
@@ -49,8 +50,9 @@ namespace geometria {
 			/** @brief Retorna o perimetro do triangulo */
 			float calcPerimetro();
 
-			/** @brief Sobrecarga do operador de insercao em stream */
-			friend ostream& operator<< (ostream &o, const Triangulo &t);
+		private:
+			/** @brief Metodo para imprimir os dados de um triangulo */
+			std::ostream& print(std::ostream &o) const;
 	};
 }
 

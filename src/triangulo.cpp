@@ -4,12 +4,11 @@
  *			um triangulo equilatero
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	15/11/2017
- * @date 	21/11/2017
+ * @date 	24/11/2017
  */
 
 
 #include "triangulo.h"
-
 
 #include <cmath>
 
@@ -30,6 +29,9 @@ namespace geometria {
 		lado = _lado;
 	}
 
+	//Destrutor padrao
+	Triangulo::~Triangulo(){}
+
 	/** @return Lado do triangulo */
 	float Triangulo::getLado() {
 		return lado;
@@ -45,6 +47,7 @@ namespace geometria {
 		lado = _lado;
 	}
 
+	/** @return Area do triangulo */
 	float Triangulo::calcArea() {
 		float altura = (lado / 2.0) * sqrt(3);
 		return (lado * altura) / 2.0;
@@ -55,13 +58,12 @@ namespace geometria {
 		return 3.0 * lado;
 	}
 
-	/** 
-	 * @param o Referencia para stream de saida
-	 * @param t Referencia para um objeto Triangulo
-	 * @return Referencia para stream de saida
-	 */
-	std::ostream& operator<< (std::ostream &o, const Triangulo &t) {
-		o << "Lado do triangulo: " << t.lado;
+	/**
+ 	 * @param o Referencia para stream de saida
+ 	 * @return Referencia para Stream de saida
+ 	 */
+	std::ostream& Triangulo::print(std::ostream &o) const {
+		o << "Lado do triangulo = " << lado;
 		return o;
 	}
 }
